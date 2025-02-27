@@ -1,179 +1,175 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Personal</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #f5f5f5;
-            color: #333;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            background: linear-gradient(135deg, #6366f1, #2563eb);
-            color: white;
-            padding: 60px 0;
-            text-align: center;
-            border-radius: 0 0 30px 30px;
-            margin-bottom: 40px;
-        }
-
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 5px solid white;
-            margin-bottom: 20px;
-        }
-
-        .section {
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .section:hover {
-            transform: translateY(-5px);
-        }
-
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            color: #2563eb;
-            margin-bottom: 20px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .fun-fact {
-            background: #f8fafc;
-            padding: 20px;
-            border-radius: 15px;
-            border-left: 5px solid #2563eb;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 30px;
-            background: rgba(255,255,255,0.2);
-            transition: background 0.3s ease;
-        }
-
-        .social-links a:hover {
-            background: rgba(255,255,255,0.3);
-        }
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill-tag {
-            background: #e0e7ff;
-            color: #2563eb;
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-size: 0.9em;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-            
-            header {
-                padding: 40px 0;
-            }
-        }
-    </style>
+    <title>Proyectos - Centro de Información</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <img src="tu-foto.jpg" alt="Tu Nombre" class="profile-img">
-        <h1>Tu Nombre</h1>
-        <p>Desarrollador Web | Diseñador | Creativo</p>
-        <div class="social-links">
-            <a href="#">LinkedIn</a>
-            <a href="#">GitHub</a>
-            <a href="#">Twitter</a>
+        <div class="logo">
+            <i class="fas fa-tasks"></i>
+            <h1>Seguimiento de Proyectos</h1>
         </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#comentarios">Comentarios</a></li>
+                <li><a href="#" id="login-btn">Acceso Creador</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="container">
-        <div class="grid">
-            <div class="section">
-                <h2>Sobre Mí</h2>
-                <p>¡Hola! Soy un apasionado desarrollador web con experiencia en crear experiencias digitales únicas. Me encanta combinar creatividad y tecnología para resolver problemas.</p>
-                <div class="skills">
-                    <span class="skill-tag">HTML5</span>
-                    <span class="skill-tag">CSS3</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Node.js</span>
-                </div>
+    <main>
+        <section id="inicio" class="hero">
+            <div class="day-night-cycle"></div>
+            <div class="fireflies-container">
+                <!-- Luciérnagas se generan con JavaScript -->
             </div>
+            <div class="hero-content">
+                <h2>Seguimiento de Proyectos en Desarrollo</h2>
+                <p>Bienvenido al centro de información sobre mis proyectos actuales. Aquí podrás encontrar actualizaciones, avances y detalles sobre todo lo que estoy creando.</p>
+            </div>
+        </section>
 
-            <div class="section">
-                <h2>Datos Curiosos</h2>
-                <div class="fun-fact">
-                    <p>🌟 Aprendí a programar a los 12 años</p>
-                </div>
-                <div class="fun-fact">
-                    <p>🎮 Soy un ávido jugador de ajedrez</p>
-                </div>
-                <div class="fun-fact">
-                    <p>🌍 He visitado 15 países diferentes</p>
+        <section id="proyectos">
+            <h2>Proyectos Actuales</h2>
+            <div class="proyectos-container" id="proyectos-lista">
+                <!-- Los proyectos se cargarán dinámicamente desde JavaScript -->
+                <div class="proyecto-card placeholder">
+                    <div class="proyecto-info">
+                        <h3>Cargando proyectos...</h3>
+                        <div class="progreso">
+                            <div class="barra-progreso">
+                                <div class="progreso-completado" style="width: 0%"></div>
+                            </div>
+                            <span>0%</span>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
+
+        <section id="comentarios">
+            <h2>Comentarios y Sugerencias</h2>
+            <div class="comentarios-container">
+                <div class="comentarios-existentes" id="comentarios-lista">
+                    <!-- Los comentarios se cargarán dinámicamente -->
+                </div>
+                <div class="nuevo-comentario">
+                    <h3>Deja tu comentario</h3>
+                    <form id="comentario-form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="proyecto-selector">Proyecto:</label>
+                            <select id="proyecto-selector" name="proyecto" required>
+                                <option value="">Selecciona un proyecto</option>
+                                <!-- Las opciones se cargarán dinámicamente -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="comentario">Comentario:</label>
+                            <textarea id="comentario" name="comentario" rows="4" required></textarea>
+                        </div>
+                        <button type="submit">Enviar Comentario</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para login del creador -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Acceso para Creador</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Usuario:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Ingresar</button>
+            </form>
         </div>
+    </div>
 
-        <div class="section">
-            <h2>Proyectos Destacados</h2>
-            <div class="grid">
-                <div class="fun-fact">
-                    <h3>Proyecto 1</h3>
-                    <p>Descripción breve del proyecto y tecnologías utilizadas.</p>
-                </div>
-                <div class="fun-fact">
-                    <h3>Proyecto 2</h3>
-                    <p>Descripción breve del proyecto y tecnologías utilizadas.</p>
+    <!-- Panel del creador (oculto por defecto) -->
+    <div id="panel-creador" class="panel-creador">
+        <div class="panel-header">
+            <h2>Panel del Creador</h2>
+            <button id="cerrar-panel">Cerrar Sesión</button>
+        </div>
+        <div class="panel-content">
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="crear-proyecto">Crear Proyecto</button>
+                <button class="tab-btn" data-tab="actualizar-proyecto">Actualizar Proyecto</button>
+                <button class="tab-btn" data-tab="ver-comentarios">Ver Comentarios</button>
+            </div>
+            
+            <div class="tab-content active" id="crear-proyecto">
+                <h3>Crear Nuevo Proyecto</h3>
+                <form id="nuevo-proyecto-form">
+                    <div class="form-group">
+                        <label for="titulo-proyecto">Título:</label>
+                        <input type="text" id="titulo-proyecto" name="titulo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcion-proyecto">Descripción:</label>
+                        <textarea id="descripcion-proyecto" name="descripcion" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="progreso-proyecto">Progreso Inicial (%):</label>
+                        <input type="number" id="progreso-proyecto" name="progreso" min="0" max="100" value="0" required>
+                    </div>
+                    <button type="submit">Crear Proyecto</button>
+                </form>
+            </div>
+            
+            <div class="tab-content" id="actualizar-proyecto">
+                <h3>Actualizar Proyecto Existente</h3>
+                <form id="actualizar-form">
+                    <div class="form-group">
+                        <label for="selector-proyecto">Seleccionar Proyecto:</label>
+                        <select id="selector-proyecto" name="proyecto" required>
+                            <option value="">Selecciona un proyecto</option>
+                            <!-- Las opciones se cargarán dinámicamente -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="actualizar-progreso">Nuevo Progreso (%):</label>
+                        <input type="number" id="actualizar-progreso" name="progreso" min="0" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="actualizar-nota">Nota de Actualización:</label>
+                        <textarea id="actualizar-nota" name="nota" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Actualizar Proyecto</button>
+                </form>
+            </div>
+            
+            <div class="tab-content" id="ver-comentarios">
+                <h3>Comentarios de los Usuarios</h3>
+                <div id="admin-comentarios-lista">
+                    <!-- Los comentarios se cargarán dinámicamente -->
                 </div>
             </div>
         </div>
     </div>
+
+    <footer>
+        <p>&copy; 2023 Seguimiento de Proyectos. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
